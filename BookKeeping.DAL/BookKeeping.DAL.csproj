@@ -42,6 +42,16 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BookKeeping.Common\BookKeeping.Common.csproj">
+      <Project>{6c94c21a-3842-4067-bd60-4494cad67ed5}</Project>
+      <Name>BookKeeping.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BookKeeping.Model\BookKeeping.Model.csproj">
+      <Project>{e755c707-5007-4467-b040-4f4e8c4c3653}</Project>
+      <Name>BookKeeping.Model</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
