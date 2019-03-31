@@ -40,7 +40,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="EITypeInfoBLL.cs" />
+    <Compile Include="ExpenseIncomeDetailInfoBLL.cs" />
+    <Compile Include="ExpenseIncomeTypeInfoBLL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UserInfoBLL.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BookKeeping.Common\BookKeeping.Common.csproj">

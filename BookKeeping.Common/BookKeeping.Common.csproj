@@ -47,6 +47,13 @@
     <Compile Include="MD5Helper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SQLiteHelper.cs" />
+    <Compile Include="UserInfoStatic.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BookKeeping.Model\BookKeeping.Model.csproj">
+      <Project>{e755c707-5007-4467-b040-4f4e8c4c3653}</Project>
+      <Name>BookKeeping.Model</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

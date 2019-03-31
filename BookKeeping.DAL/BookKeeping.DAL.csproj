@@ -32,6 +32,9 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data.SQLite">
+      <HintPath>..\lib\System.Data.SQLite.dll</HintPath>
+    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -40,7 +43,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="EITypeInfoDAL.cs" />
+    <Compile Include="ExpenseIncomeDetailInfoDAL.cs" />
+    <Compile Include="ExpenseIncomeTypeInfoDAL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UserInfoDAL.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BookKeeping.Common\BookKeeping.Common.csproj">
