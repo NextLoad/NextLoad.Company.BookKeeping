@@ -46,14 +46,26 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="FrmExpenseIncomeDetailInfo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="FrmExpenseIncomeDetailInfo.Designer.cs">
+      <DependentUpon>FrmExpenseIncomeDetailInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLogin.designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FrmExpenseIncomeDetailInfo.resx">
+      <DependentUpon>FrmExpenseIncomeDetailInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -75,6 +87,20 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BookKeeping.BLL\BookKeeping.BLL.csproj">
+      <Project>{4e9b16e8-4b08-437f-b9a3-1c96b17f5c81}</Project>
+      <Name>BookKeeping.BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BookKeeping.Common\BookKeeping.Common.csproj">
+      <Project>{6c94c21a-3842-4067-bd60-4494cad67ed5}</Project>
+      <Name>BookKeeping.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BookKeeping.Model\BookKeeping.Model.csproj">
+      <Project>{e755c707-5007-4467-b040-4f4e8c4c3653}</Project>
+      <Name>BookKeeping.Model</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
