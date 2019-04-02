@@ -39,7 +39,7 @@
             this.btnLogin.Location = new System.Drawing.Point(196, 161);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(65, 35);
-            this.btnLogin.TabIndex = 0;
+            this.btnLogin.TabIndex = 3;
             this.btnLogin.Text = "登录";
             this.btnLogin.UseVisualStyleBackColor = true;
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
@@ -49,7 +49,7 @@
             this.btnExit.Location = new System.Drawing.Point(295, 161);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(65, 35);
-            this.btnExit.TabIndex = 0;
+            this.btnExit.TabIndex = 4;
             this.btnExit.Text = "退出";
             this.btnExit.UseVisualStyleBackColor = true;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
@@ -69,7 +69,8 @@
             this.txtPwd.Name = "txtPwd";
             this.txtPwd.PasswordChar = '*';
             this.txtPwd.Size = new System.Drawing.Size(164, 32);
-            this.txtPwd.TabIndex = 1;
+            this.txtPwd.TabIndex = 2;
+            this.txtPwd.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtPwd_KeyUp);
             // 
             // frmLogin
             // 

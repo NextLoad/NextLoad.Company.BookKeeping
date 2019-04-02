@@ -24,9 +24,14 @@ namespace BookKeeping.UI
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
+            LoginMethod();
+        }
+
+        private void LoginMethod()
+        {
             string name = txtName.Text;
             string pwd = txtPwd.Text;
-            if (uiBll.Login(name, pwd,out UserInfoStatic.userInfo))
+            if (uiBll.Login(name, pwd, out UserInfoStatic.userInfo))
             {
                 FrmExpenseIncomeDetailInfo frm = new FrmExpenseIncomeDetailInfo();
                 this.Hide();
@@ -41,6 +46,14 @@ namespace BookKeeping.UI
         private void btnExit_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void txtPwd_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                LoginMethod();
+            }
         }
     }
 }

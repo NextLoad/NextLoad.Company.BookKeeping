@@ -136,7 +136,9 @@ namespace BookKeeping.UI
 
         private void btnEditEiType_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("正在开发中...");
+            FrmExpenseIncomeTypeInfo frmExpenseIncomeType = new FrmExpenseIncomeTypeInfo();
+            frmExpenseIncomeType.AccurdWhenChange += LoadcbEiType;
+            frmExpenseIncomeType.ShowDialog();
         }
 
         private void btnEditType_Click(object sender, EventArgs e)
@@ -164,6 +166,18 @@ namespace BookKeeping.UI
                     MessageBox.Show("删除失败，请稍后再试！");
                 }
             }
+        }
+
+        private void dgvList_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex < 0) return;
+            var row = dgvList.Rows[e.RowIndex];
+            txtId.Text = row.Cells[0].ToString();
+            cbEiType.Text = row.Cells[1].ToString();
+            dtpTime.Value = Convert.ToDateTime(row.Cells[2]);
+            txtMoney.Text = row.Cells[3].ToString();
+            cbType.Text = row.Cells[4].ToString();
+            btnSave.Text = "修改";
         }
     }
 }
