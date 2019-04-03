@@ -21,5 +21,18 @@ namespace BookKeeping.BLL
         {
             return eidiDal.GExpenseIncomeTypeInfos(dic);
         }
+
+        public bool Add(ExpenseIncomeTypeInfo eiti)
+        {
+            return eidiDal.Insert(eiti) > 0;
+        }
+        public bool Edit(ExpenseIncomeTypeInfo eiti)
+        {
+            return eidiDal.Update(eiti) > 0;
+        }
+        public bool Remove(int eid)
+        {
+            return eidiDal.Delete(eid) > 0;
+        }
     }
 }

@@ -41,7 +41,6 @@
             this.dtpTime = new System.Windows.Forms.DateTimePicker();
             this.btnRemove = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
-            this.btnEditType = new System.Windows.Forms.Button();
             this.btnEditEiType = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
@@ -89,6 +88,7 @@
             this.dgvList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvList.Size = new System.Drawing.Size(526, 481);
             this.dgvList.TabIndex = 0;
+            this.dgvList.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvList_CellDoubleClick);
             // 
             // edid
             // 
@@ -140,7 +140,6 @@
             this.groupBox3.Controls.Add(this.dtpTime);
             this.groupBox3.Controls.Add(this.btnRemove);
             this.groupBox3.Controls.Add(this.label9);
-            this.groupBox3.Controls.Add(this.btnEditType);
             this.groupBox3.Controls.Add(this.btnEditEiType);
             this.groupBox3.Controls.Add(this.btnCancel);
             this.groupBox3.Controls.Add(this.btnSave);
@@ -162,7 +161,7 @@
             // 
             // dtpTime
             // 
-            this.dtpTime.Location = new System.Drawing.Point(56, 112);
+            this.dtpTime.Location = new System.Drawing.Point(56, 117);
             this.dtpTime.Name = "dtpTime";
             this.dtpTime.Size = new System.Drawing.Size(109, 21);
             this.dtpTime.TabIndex = 20;
@@ -186,16 +185,6 @@
             this.label9.Size = new System.Drawing.Size(149, 12);
             this.label9.TabIndex = 15;
             this.label9.Text = "提示：双击表格项进行修改";
-            // 
-            // btnEditType
-            // 
-            this.btnEditType.Location = new System.Drawing.Point(56, 192);
-            this.btnEditType.Name = "btnEditType";
-            this.btnEditType.Size = new System.Drawing.Size(109, 25);
-            this.btnEditType.TabIndex = 13;
-            this.btnEditType.Text = "类型管理";
-            this.btnEditType.UseVisualStyleBackColor = true;
-            this.btnEditType.Click += new System.EventHandler(this.btnEditType_Click);
             // 
             // btnEditEiType
             // 
@@ -231,7 +220,7 @@
             // 
             this.cbType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbType.FormattingEnabled = true;
-            this.cbType.Location = new System.Drawing.Point(56, 165);
+            this.cbType.Location = new System.Drawing.Point(56, 192);
             this.cbType.Name = "cbType";
             this.cbType.Size = new System.Drawing.Size(109, 20);
             this.cbType.TabIndex = 10;
@@ -249,7 +238,7 @@
             // 
             // txtMoney
             // 
-            this.txtMoney.Location = new System.Drawing.Point(56, 138);
+            this.txtMoney.Location = new System.Drawing.Point(56, 154);
             this.txtMoney.Name = "txtMoney";
             this.txtMoney.Size = new System.Drawing.Size(109, 21);
             this.txtMoney.TabIndex = 8;
@@ -268,7 +257,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(-2, 168);
+            this.label7.Location = new System.Drawing.Point(-2, 195);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(65, 12);
             this.label7.TabIndex = 4;
@@ -277,7 +266,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(9, 142);
+            this.label6.Location = new System.Drawing.Point(9, 158);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(53, 12);
             this.label6.TabIndex = 3;
@@ -295,7 +284,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(9, 115);
+            this.label4.Location = new System.Drawing.Point(9, 120);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(53, 12);
             this.label4.TabIndex = 1;
@@ -340,7 +329,6 @@
         private System.Windows.Forms.DateTimePicker dtpTime;
         private System.Windows.Forms.Button btnRemove;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Button btnEditType;
         private System.Windows.Forms.Button btnEditEiType;
         private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.Button btnSave;

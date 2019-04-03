@@ -11,4 +11,9 @@ namespace BookKeeping.Model
         public string etitle { get; set; }
         public string EItitle { get; set; }
     }
+
+    public partial class ExpenseIncomeTypeInfo
+    {
+        public string Eititle { get; set; }
+    }
 }
