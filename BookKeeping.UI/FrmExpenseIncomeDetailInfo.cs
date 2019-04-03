@@ -172,11 +172,11 @@ namespace BookKeeping.UI
         {
             if (e.RowIndex < 0) return;
             var row = dgvList.Rows[e.RowIndex];
-            txtId.Text = row.Cells[0].ToString();
-            cbEiType.Text = row.Cells[1].ToString();
-            dtpTime.Value = Convert.ToDateTime(row.Cells[2]);
-            txtMoney.Text = row.Cells[3].ToString();
-            cbType.Text = row.Cells[4].ToString();
+            txtId.Text = row.Cells[0].Value.ToString();
+            cbEiType.Text = row.Cells[1].Value.ToString();
+            dtpTime.Value = Convert.ToDateTime(row.Cells[2].Value);
+            txtMoney.Text = row.Cells[3].Value.ToString();
+            cbType.Text = row.Cells[4].Value.ToString();
             btnSave.Text = "修改";
         }
     }
