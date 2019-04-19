@@ -22,6 +22,11 @@ namespace BookKeeping.BLL
             return eidiDal.GetExpenseIncomeDetailInfos(dic);
         }
 
+        public List<ExpenseIncomeDetailInfo> GetListBytime(Dictionary<string, string> dic, DateTime start,DateTime end)
+        {
+            return eidiDal.GetExpenseIncomeDetailInfos(dic, start,end);
+        }
+
         public bool Add(ExpenseIncomeDetailInfo eidi)
         {
             return eidiDal.Insert(eidi) > 0;
