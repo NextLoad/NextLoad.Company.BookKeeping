@@ -107,9 +107,10 @@ namespace BookKeeping.DAL
         public int Update(ExpenseIncomeDetailInfo eidi)
         {
             string sqlText =
-                "update ExpenseIncomeDetailInfo set edtid = @uid,eddatetime = @datetime,edmoney = @money,edtype = @type";
+                "update ExpenseIncomeDetailInfo set edtid = @tid,eddatetime = @datetime,edmoney = @money,edtype = @type where edid = @id";
             SQLiteParameter[] parameters =
             {
+                new SQLiteParameter("@id", eidi.edid),
                 new SQLiteParameter("@tid", eidi.edtid),
                 new SQLiteParameter("@datetime", eidi.eddatetime),
                 new SQLiteParameter("@money", eidi.edmoney),
